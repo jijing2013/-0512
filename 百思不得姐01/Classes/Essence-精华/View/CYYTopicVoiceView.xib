@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="CYYTopicVoiceView">
+            <rect key="frame" x="0.0" y="0.0" width="237" height="256"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imageBackground" translatesAutoresizingMaskIntoConstraints="NO" id="vP5-Hg-zsp" userLabel="占位图">
+                    <rect key="frame" x="0.0" y="20" width="237" height="25"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="25" id="M1U-lN-GEU"/>
+                    </constraints>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rHX-jI-kMj">
+                    <rect key="frame" x="0.0" y="0.0" width="237" height="256"/>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bks-lm-QK6" userLabel="播放次数">
+                    <rect key="frame" x="201" y="0.0" width="36" height="17"/>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Un3-ZP-u7X" userLabel="播放时间">
+                    <rect key="frame" x="201" y="239" width="36" height="17"/>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y3k-I1-mgm">
+                    <rect key="frame" x="87" y="97" width="63" height="63"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="63" id="RBK-RH-Hpp"/>
+                        <constraint firstAttribute="height" constant="63" id="lP5-rd-tsJ"/>
+                    </constraints>
+                    <state key="normal" image="playButtonPlay" backgroundImage="playButton"/>
+                    <connections>
+                        <action selector="playVoice:" destination="iN0-l3-epB" eventType="touchUpInside" id="uz4-JO-wtQ"/>
+                    </connections>
+                </button>
+                <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="02a-Y3-PQD">
+                    <rect key="frame" x="18" y="224" width="165" height="31"/>
+                    <connections>
+                        <action selector="slider:" destination="iN0-l3-epB" eventType="touchUpInside" id="Qay-j6-cvm"/>
+                        <action selector="sliderValueChange:" destination="iN0-l3-epB" eventType="valueChanged" id="vO4-kP-mDE"/>
+                        <action selector="startSlider:" destination="iN0-l3-epB" eventType="touchDown" id="dPu-hO-jE2"/>
+                    </connections>
+                </slider>
+            </subviews>
+            <color key="backgroundColor" red="0.86274509803921573" green="0.86274509803921573" blue="0.86274509803921573" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="Un3-ZP-u7X" secondAttribute="trailing" id="01z-0T-Rud"/>
+                <constraint firstItem="vP5-Hg-zsp" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="20" id="0Cg-2i-EX7"/>
+                <constraint firstAttribute="trailing" secondItem="vP5-Hg-zsp" secondAttribute="trailing" id="458-A4-g1M"/>
+                <constraint firstItem="y3k-I1-mgm" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="6q0-Yz-zHH"/>
+                <constraint firstItem="vP5-Hg-zsp" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="JfB-1q-OgL"/>
+                <constraint firstItem="02a-Y3-PQD" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="20" id="MbV-EI-NeY"/>
+                <constraint firstItem="rHX-jI-kMj" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="VoK-Fh-gsk"/>
+                <constraint firstItem="y3k-I1-mgm" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="XWM-bS-8NX"/>
+                <constraint firstItem="bks-lm-QK6" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="YAT-uT-Ra1"/>
+                <constraint firstAttribute="bottom" secondItem="rHX-jI-kMj" secondAttribute="bottom" id="b8R-ft-rv2"/>
+                <constraint firstItem="rHX-jI-kMj" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="f2t-sK-8NR"/>
+                <constraint firstAttribute="trailing" secondItem="rHX-jI-kMj" secondAttribute="trailing" id="hFY-4G-lmg"/>
+                <constraint firstAttribute="bottom" secondItem="02a-Y3-PQD" secondAttribute="bottom" constant="2" id="muP-5p-x2E"/>
+                <constraint firstItem="Un3-ZP-u7X" firstAttribute="leading" secondItem="02a-Y3-PQD" secondAttribute="trailing" constant="20" id="nD1-y3-5RV"/>
+                <constraint firstAttribute="trailing" secondItem="bks-lm-QK6" secondAttribute="trailing" id="wDw-b5-FbD"/>
+                <constraint firstAttribute="bottom" secondItem="Un3-ZP-u7X" secondAttribute="bottom" id="yay-AA-n7r"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="imageView" destination="rHX-jI-kMj" id="Ya3-3Y-Mef"/>
+                <outlet property="playButton" destination="y3k-I1-mgm" id="FXj-VR-PwF"/>
+                <outlet property="playcountLabel" destination="bks-lm-QK6" id="vCx-SM-alY"/>
+                <outlet property="progressSlider" destination="02a-Y3-PQD" id="raW-lS-pco"/>
+                <outlet property="voicetimeLabel" destination="Un3-ZP-u7X" id="k7f-T1-mCn"/>
+            </connections>
+            <point key="canvasLocation" x="228.5" y="125"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="imageBackground" width="75" height="15"/>
+        <image name="playButton" width="63" height="63"/>
+        <image name="playButtonPlay" width="30" height="30"/>
+    </resources>
+</document>

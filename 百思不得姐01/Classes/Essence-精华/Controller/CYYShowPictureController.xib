@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CYYShowPictureController">
+            <connections>
+                <outlet property="progressView" destination="prT-ua-yle" id="ZaO-LR-ZA9"/>
+                <outlet property="scrollView" destination="ma9-cR-29j" id="rxE-JK-Fkx"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" alpha="0.59999999999999998" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="348"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ma9-cR-29j">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="348"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </scrollView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NYj-G6-67o" userLabel="返回">
+                    <rect key="frame" x="20" y="40" width="35" height="35"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="35" id="TSr-0K-L2s"/>
+                        <constraint firstAttribute="height" constant="35" id="btX-s0-F88"/>
+                    </constraints>
+                    <state key="normal" backgroundImage="show_image_back_icon"/>
+                    <connections>
+                        <action selector="back" destination="-1" eventType="touchUpInside" id="aBW-Jd-ukf"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1mf-Mz-a4P">
+                    <rect key="frame" x="220" y="303" width="60" height="25"/>
+                    <color key="backgroundColor" red="0.66666666666666663" green="0.66666666666666663" blue="0.66666666666666663" alpha="0.5" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="60" id="43v-ay-5G5"/>
+                        <constraint firstAttribute="height" constant="25" id="biY-BQ-hxB"/>
+                    </constraints>
+                    <state key="normal" title="转发">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="share:" destination="-1" eventType="touchUpInside" id="k5F-7I-dqq"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hxU-Mq-soV">
+                    <rect key="frame" x="295" y="303" width="60" height="25"/>
+                    <color key="backgroundColor" white="0.66666666666666663" alpha="0.50068623310810811" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="60" id="NfV-X8-068"/>
+                        <constraint firstAttribute="height" constant="25" id="YwK-c0-fb3"/>
+                    </constraints>
+                    <state key="normal" title="保存">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="save:" destination="-1" eventType="touchUpInside" id="kAU-zm-qQ3"/>
+                    </connections>
+                </button>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="prT-ua-yle" customClass="DALabeledCircularProgressView">
+                    <rect key="frame" x="137" y="124" width="100" height="100"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="100" id="DWu-eb-VbS"/>
+                        <constraint firstAttribute="height" constant="100" id="dVO-hH-iiy"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="prT-ua-yle" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="07E-z1-BMc"/>
+                <constraint firstItem="prT-ua-yle" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="1f1-qk-d03"/>
+                <constraint firstItem="ma9-cR-29j" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="3ol-Kx-0aQ"/>
+                <constraint firstItem="NYj-G6-67o" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="9my-6E-9zk"/>
+                <constraint firstAttribute="bottom" secondItem="ma9-cR-29j" secondAttribute="bottom" id="AKi-zR-grp"/>
+                <constraint firstAttribute="bottom" secondItem="hxU-Mq-soV" secondAttribute="bottom" constant="20" id="HK5-dd-cGR"/>
+                <constraint firstItem="ma9-cR-29j" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="LjX-up-XPK"/>
+                <constraint firstAttribute="bottom" secondItem="ma9-cR-29j" secondAttribute="bottom" id="Nbb-ay-KAK"/>
+                <constraint firstAttribute="bottom" secondItem="1mf-Mz-a4P" secondAttribute="bottom" constant="20" id="TrE-3G-nI8"/>
+                <constraint firstItem="hxU-Mq-soV" firstAttribute="leading" secondItem="1mf-Mz-a4P" secondAttribute="trailing" constant="15" id="a45-Sd-2F0"/>
+                <constraint firstAttribute="trailing" secondItem="hxU-Mq-soV" secondAttribute="trailing" constant="20" id="gTA-6h-qNL"/>
+                <constraint firstItem="ma9-cR-29j" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="lPj-EK-EQn"/>
+                <constraint firstAttribute="trailing" secondItem="ma9-cR-29j" secondAttribute="trailing" id="lgQ-Gs-aA6"/>
+                <constraint firstItem="NYj-G6-67o" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="40" id="qkH-tu-z8z"/>
+                <constraint firstItem="ma9-cR-29j" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="w6k-B1-MZf"/>
+                <constraint firstAttribute="trailing" secondItem="ma9-cR-29j" secondAttribute="trailing" id="wb3-FQ-y8F"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="-57.5" y="-137"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="show_image_back_icon" width="35" height="35"/>
+    </resources>
+</document>
